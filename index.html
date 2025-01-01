@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Fitness Tracker</h1>
+      <p>Track your health and fitness progress</p>
+    </header>
+
+    <section class="tracker">
+      <div class="month-year-day-selector">
+        <label for="month-select">Select Month:</label>
+        <select id="month-select">
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+
+        <label for="year-select">Select Year:</label>
+        <select id="year-select">
+          <option value="2025">2025</option>
+          <option value="2026">2026</option>
+          <option value="2027">2027</option>
+        </select>
+
+        <label for="day-select">Select Day:</label>
+        <select id="day-select">
+          <!-- Day options will be dynamically populated -->
+        </select>
+      </div>
+
+      <div class="stats">
+        <h2>Your Stats</h2>
+        <ul>
+          <li><strong>Steps:</strong> <span id="steps">0</span></li>
+          <li><strong>Calories Burned:</strong> <span id="calories">0</span></li>
+          <li><strong>Workout Duration:</strong> <span id="duration">0</span> mins</li>
+        </ul>
+      </div>
+
+      <div class="input-section">
+        <h2>Log Your Workout</h2>
+        <form id="workout-form">
+          <label for="steps-input">Steps:</label>
+          <input type="number" id="steps-input" placeholder="Enter steps" required>
+
+          <label for="calories-input">Calories Burned:</label>
+          <input type="number" id="calories-input" placeholder="Enter calories burned" required>
+
+          <label for="duration-input">Workout Duration (mins):</label>
+          <input type="number" id="duration-input" placeholder="Enter duration" required>
+
+          <button type="submit">Log Workout</button>
+        </form>
+      </div>
+    </section>
+
+    <div id="chart-container">
+      <h3>Fitness Progress per day across the Month and year</h3>
+      <canvas id="fitnessCanvas"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
