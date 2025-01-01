@@ -1,1 +1,1 @@
-# This is a Fitness Tracker Dashboar,here you can track your physical improvement 
+# This is a Fitness Tracker Dashboard,here you can track your physical improvement 
